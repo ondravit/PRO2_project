@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users List</title>
+</head>
+<body>
+
+<h1 th:text="${user != null ? 'Do you want to delete user: ' + user.name : 'User does not exist.'}"></h1>
+
+<form method="post" th:action="@{/users/{id}/delete(id=${user.id})}">
+    <input type="submit" value="Delete">
+</form>
+
+<a th:if="${user != null}" th:href="@{/users/{id}(id=${user.id})}">Back</a>
+
+
+
+</body>
+</html>
