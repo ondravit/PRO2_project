@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses List</title>
+</head>
+<body>
+
+<h1 th:text="${course != null ? 'Course: ' + course.name : 'Course does not exist.'}"></h1>
+<h3 th:text="${lecturer != null ? 'Lecturer' + lecturer.name : ''}"></h3>
+
+<a th:if="${course != null}" th:href="@{'/courses/'+${course.id}+'/edit'}">Edit Course</a>
+<a th:if="${course != null}" th:href="@{'/courses/'+${course.id}+'/delete'}">Delete Course</a>
+
+
+
+</body>
+</html>

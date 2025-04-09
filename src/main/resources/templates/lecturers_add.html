@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add User</title>
+    <title>Add Lecturer</title>
 </head>
 <body>
 
-<h1 th:text="${user.id == 0 ? 'Add New User' : 'Edit User'}"></h1>
+<h1 th:text="${lecturer.id == 0 ? 'Add New Lecturer' : 'Edit Lecturer'}"></h1>
 
-<form method="post" th:action="@{/users/save}" th:object="${user}">
+<form method="post" th:action="@{/lecturers/save}" th:object="${lecturer}">
     <input type="hidden" th:field="*{id}">
     Name: <input type="text" th:field="*{name}">
     <input type="submit" value="Save">

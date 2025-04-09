@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecturers List</title>
+</head>
+<body>
+
+<h1>List of lecturers</h1>
+
+<a th:href="@{/}">Home page</a>
+<br>
+<a th:href="@{/lecturers/add}">Add New Lecturer</a>
+
+<ul>
+    <li th:each="lecturer: ${lecturers}">
+        <a th:href="@{'/lecturers/'+${lecturer.id}}" th:text="${lecturer.name}"></a>
+    </li>
+</ul>
+
+</body>
+</html>
